@@ -1,0 +1,75 @@
+
+# ==========================================
+# 1. ENTHORNO VIRTUALES Y DEPENDENCIAS
+# ==========================================
+.venv/
+venv/
+ENV/
+env/
+bin/
+lib/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+venv_ia_p1/
+
+# ==========================================
+# 2. ARCHIVOS DE CACHÉ Y COMPILACIÓN
+# ==========================================
+**/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.pyre/
+
+# ==========================================
+# 3. VARIABLES DE ENTORNO Y CREDENCIALES (¡Seguridad!)
+# ==========================================
+.env
+.env.local
+.env.*
+!.env.example
+*.bak
+*.conf
+*.key
+*.pem
+
+# ==========================================
+# 4. CONFIGURACIÓN DE EDITORES Y SITEMA OPERATIVO
+# ==========================================
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# PyCharm / IntelliJ
+.idea/
+
+# Sistema Operativo
+.DS_Store
+Thumbs.db
