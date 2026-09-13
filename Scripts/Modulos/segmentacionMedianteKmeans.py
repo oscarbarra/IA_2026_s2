@@ -30,7 +30,10 @@ def evaluar_kmeans_combinaciones(df_train, seed=42):
             X_pixels = img[:, :, channels].reshape(-1, len(channels))
             
             kmeans = KMeans(n_clusters=2, init='k-means++', n_init=10, random_state=seed)
-            labels = kmeans.fit_predict(X_pixels).reshape(h, w)
+            #labels = kmeans.fit_predict(X_pixels).reshape(h, w)
+            idx_sample = np.random.choice(X_pixels.shape[0], size=5000, replace=False)
+            kmeans.fit(X_pixels[idx_sample])
+            labels = kmeans.predict(X_pixels).reshape(h, w)
             
             # Criterio de selección de cluster: El cluster con menor intensidad RGB promedio suele ser fondo
             c0_mean = img[labels == 0].mean() if np.any(labels == 0) else 0
