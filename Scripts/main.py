@@ -60,6 +60,7 @@ def main():
     res_sfs = entrenar_y_evaluar_roc(X_train[:, idx_sfs], y_train, X_val[:, idx_sfs], y_val, X_test[:, idx_sfs], y_test)
     
     # 6. PCA + Bayes
+    verificar_valores_pca(X_train)
     X_tr_pca, X_val_pca, X_test_pca, _ = aplicar_pca_y_evaluar(X_train, X_val, X_test)
     res_pca = entrenar_y_evaluar_roc(X_tr_pca, y_train, X_val_pca, y_val, X_test_pca, y_test)
     
